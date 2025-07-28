@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/festa-bts1/static/css/main.60db9d05.css",
+    "main.css": "/festa-bts1/static/css/main.6dbca1e7.css",
     "main.js": "/festa-bts1/static/js/main.75ecba89.js",
     "static/js/453.a8083759.chunk.js": "/festa-bts1/static/js/453.a8083759.chunk.js",
     "static/media/festa.png": "/festa-bts1/static/media/festa.d095d62b9f15cfcfa8d3.png",
     "index.html": "/festa-bts1/index.html",
-    "main.60db9d05.css.map": "/festa-bts1/static/css/main.60db9d05.css.map",
+    "main.6dbca1e7.css.map": "/festa-bts1/static/css/main.6dbca1e7.css.map",
     "main.75ecba89.js.map": "/festa-bts1/static/js/main.75ecba89.js.map",
     "453.a8083759.chunk.js.map": "/festa-bts1/static/js/453.a8083759.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60db9d05.css",
+    "static/css/main.6dbca1e7.css",
     "static/js/main.75ecba89.js"
   ]
 }
