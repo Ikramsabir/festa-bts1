@@ -1,0 +1,260 @@
+.festa-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: Arial, sans-serif;
+  color: #4b2e83;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+/* Activities Section */
+.festa-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.festa-10th{
+   width: 100%;
+   height: auto;
+}
+
+.festa-banner {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(75, 46, 131, 0.3);
+}
+
+.activities-list {
+  flex: 1;
+}
+
+.activities-list h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.activities-list ul {
+  list-style: disc inside;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Slider Section Common */
+.festa-slider {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+
+.slider-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 1rem;
+  max-height: 500px;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.slider-image.fade-out {
+  opacity: 0;
+}
+
+.slider-image.fade-in {
+  opacity: 1;
+}
+
+
+
+
+/*.slider-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 1rem;
+  max-height: 500px;
+}*/
+
+/* Buttons */
+.btn-arrow {
+  background: rgba(255 255 255 / 0.9);
+  border: none;
+  padding: 1rem 1.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.btn-arrow:hover {
+  background-color: white;
+}
+
+.btn-arrow.left {
+  margin-left: 1.5rem;
+  order: 0;
+}
+
+.btn-arrow.right {
+  margin-right: 1.5rem;
+  order: 2;
+}
+
+/* Slider Counter */
+.slider-counter {
+  margin-top: 1rem;
+  text-align: center;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Albums Slider - 3D Carousel */
+.carousel-3d {
+  position: relative;
+  width: 100%;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 520px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-album {
+  position: absolute;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1;
+  text-align: center;
+}
+
+.carousel-album.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.carousel-album.left {
+  transform: translateX(-60%) rotateY(35deg) scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.carousel-album.right {
+  transform: translateX(60%) rotateY(-35deg) scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.carousel-album.hidden {
+  display: none;
+}
+
+.album-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 0.8rem;
+}
+
+.desc-toggle-btn {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.desc-toggle-btn:hover {
+  background-color: #6f349a;
+}
+
+.album-description {
+  font-size: 1rem;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  overflow: hidden;
+}
+
+/* Animation when description is shown */
+.album-description.show {
+  opacity: 1;
+  max-height: 400px;
+}
+
+.album-description.hide {
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-3d {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .carousel-album.left,
+  .carousel-album.right {
+    display: none;
+  }
+
+  .carousel-album.active {
+    position: static;
+    transform: none;
+    opacity: 1;
+  }
+
+  .carousel-track {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .album-img {
+    max-width: 100%;
+  }
+}
+
